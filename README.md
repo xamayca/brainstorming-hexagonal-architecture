@@ -31,8 +31,7 @@
 > - https://github.com/lexik/LexikJWTAuthenticationBundle/tree/3.x/Resources/doc
 
 ## Sommaire
-> - ### [1-Architecture (Clean & Hexagonal)](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/1-Architecture-.md)
-> - ### [2-Configuration de base (Symfony).md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/2-Configuration%20de%20base.md)
+> - ### [1-Architecture (Clean & Hexagonal)](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/1-Architecture%20(Clean%20%26%20Hexagonal).md)
+> - ### [2-Configuration de base (Symfony).md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/2-Configuration%20de%20base%20(Symfony).md)
 > - ### [3-Route & Mapping (Registration).md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/3-Route%20%26%20Mapping%20(Registration).md)
-> - ### [4-PHPStan Installation & Utilisation (PHP Static Analysis Tool).md](
-
+> - ### [4-PHPStan Installation & Utilisation (PHP Static Analysis Tool).md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/4-PHPStan%20Installation%20%26%20Utilisation%20(PHP%20Static%20Analysis%20Tool).md)
