@@ -16,6 +16,6 @@ App\:
     - '../src/Kernel.php'
 ```
 > - Ici, nous avons retiré l'exclusion du répertoire `../src/Entity/` car dans notre architecture Clean & Hexagonale, les entités se trouvent dans le répertoire `../src/**/Domain/Entity/`.
-> - `**` correspondant à un répertoire situé entre `src/` et `Domain/Entity/`, exemple : `Registration/Domain/Entity/`.
+> - `**` correspondant à un répertoire situé entre `src/` et `Domain/Entity/`, exemple : `src/Registration/Domain/Entity/`.
 > - Modifier le fichier `config/routes.yaml`:
 ```yaml
