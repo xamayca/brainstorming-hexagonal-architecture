@@ -20,4 +20,13 @@ composer require --dev phpstan/phpstan
 ```bash
 vendor/bin/phpstan analyse src
 ```
+> - Pour lancer PHPStan et analyser le code de votre projet contenu dans le répertoire src/ avec un niveau de règle spécifique (0 à 9) :
+```bash
+vendor/bin/phpstan analyse src --level 5
+```
+> - Pour lancer PHPStan et analyser le code de votre projet contenu dans le répertoire src/ avec un niveau de règle maximum (9) :
+```bash
+vendor/bin/phpstan analyse src --level max
+```
+
 
