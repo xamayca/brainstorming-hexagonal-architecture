@@ -1,4 +1,4 @@
-# 1 - L'ARCHITECTURE CLEAN & HEXAGONALE
+# 1 - L'ARCHITECTURE (Clean & Hexagonal)
 
 ## Introduction
 > - L'architecture Clean & Hexagonale est une architecture logicielle qui permet de concevoir des applications web de manière modulaire et maintenable.

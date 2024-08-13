@@ -1,4 +1,4 @@
-# 2 - CONFIGURATION DE BASE
+# 2 - CONFIGURATION DE BASE (Symfony)
 
 ## Introduction
 > - Pour que l'application Symfony fonctionne correctement avec l'architecture Clean & Hexagonale, il est nécessaire de configurer quelques éléments de base.
