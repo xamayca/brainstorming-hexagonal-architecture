@@ -1,11 +1,5 @@
-#controllers:
-#    resource:
-#        path: ../src/Controller/
-#        namespace: App\Controller
-#    type: attribute
-
-registration:
+controllers:
     resource:
-        path: '../src/Registration/Presentation/Controller/'
-        namespace: App\Registration\Presentation\Controller
+        path: ../src/Controller/
+        namespace: App\Controller
     type: attribute
