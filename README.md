@@ -35,5 +35,5 @@
 > - https://github.com/lexik/LexikJWTAuthenticationBundle/tree/3.x/Resources/doc
 
 ## Sommaire
-> - ### [0-Definitions.md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/0-Definitions.md)
+> - ### [0-Architecture.md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/Architecture.md)
 
