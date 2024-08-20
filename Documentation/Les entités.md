@@ -136,3 +136,63 @@ class Post
 > - Nous ne les avons pas définis pour les propriétés `id`, `createdAt` et `updatedAt` car elles sont immuables et ne peuvent pas être modifiées une fois qu'elles ont été créées.
 > - Nous avons également défini une méthode `update` qui met à jour la propriété `updatedAt` à chaque fois qu'une propriété de la classe, donc d'un post, est modifiée.
 > - Par exemple, si le titre d'un post est modifié, la date de mise à jour du post sera également mise à jour.
+
+> - La suite va consister à créer un `Repository` pour notre entité `Post` afin de pouvoir interagir avec la base de données.
+> - Un `Repository` est une classe qui permet de récupérer, stocker et supprimer des entités dans la base de données.
+> - Il contient des méthodes pour effectuer des opérations de base sur les entités, telles que la recherche par identifiant, la sauvegarde et la suppression.
+> - Nous allons créer un `Repository` pour notre entité `Post` qui nous permettra d'interagir avec la base de données et de manipuler les posts.
+
+```php
+<?php
+
+namespace App\Post\Domain\Repository;
+
+use App\Post\Domain\Entity\Post;
+
+interface PostRepositoryInterface
+{
+    public function find(PostId $id): ?Post;
+
+    public function save(Post $post): void;
+
+    public function delete(Post $post): void;
+}
+```
+> - Dans cette interface, nous avons défini les méthodes `find`, `save` et `delete` qui seront implémentées par le `Repository` de l'entité `Post`.
+> - La méthode `find` permet de rechercher un post par son identifiant.
+> - La méthode `save` permet de sauvegarder un post dans la base de données.
+> - La méthode `delete` permet de supprimer un post de la base de données.
+> - Ces méthodes seront implémentées dans le `Repository` de l'entité `Post` pour effectuer les opérations correspondantes sur la base de données.
+> - Nous allons maintenant créer une classe `PostRepository` qui implémentera cette interface et nous permettra d'interagir avec la base de données.
+
+```php
+<?php
+
+namespace App\Post\Infrastructure\Repository;
+
+use App\Post\Domain\Entity\Post;
+
+class PostRepository implements PostRepositoryInterface
+{
+    public function find(PostId $id): ?Post
+    {
+        // Implémentation de la méthode find
+    }
+
+    public function save(Post $post): void
+    {
+        // Implémentation de la méthode save
+    }
+
+    public function delete(Post $post): void
+    {
+        // Implémentation de la méthode delete
+    }
+}
+```
+> - Dans cette classe, nous avons défini un `Repository` pour l'entité `Post` qui implémente l'interface `PostRepositoryInterface`.
+> - Nous avons défini les méthodes `find`, `save` et `delete` qui permettent de rechercher, sauvegarder et supprimer un post dans la base de données.
+> - Ces méthodes seront implémentées pour effectuer les opérations correspondantes sur la base de données.
+> - Nous avons maintenant une entité `Post` avec un `Repository` qui nous permet d'interagir avec la base de données et de manipuler les posts.
+> - Nous pouvons maintenant utiliser cette entité et ce `Repository` dans notre application pour gérer les posts et les stocker en base de données.
+> - Nous avons ainsi créé une structure de base pour notre application en utilisant des entités et des `Repositories` pour interagir avec la base de données et manipuler les données.
