@@ -7,6 +7,8 @@
 > - https://alistaircockburn.com/Hexagonal%20Budapest%2023-05-18.pdf
 > - Architecture (Clean & Hexagonal) :
 > - https://www.youtube.com/watch?v=2H1rdx3al_8
+> - Object Value (PHP) :
+> - https://wendelladriel.com/blog/understanding-value-objects-in-php
 > - PHPStan (PHP Static Analysis Tool) :
 > - https://phpstan.org/user-guide/getting-started
 > - Symfony :
