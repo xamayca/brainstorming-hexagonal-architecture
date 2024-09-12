@@ -77,6 +77,7 @@ parameters:
         - config
         - public
         - src
+        - tests
 ```
 > - Dans ce fichier de configuration, nous avons défini le niveau de règle PHPStan à 8 et les répertoires à analyser (bin, config, public, src).
 > - Nous n'avons pas utilisé la recette Symfony pour PHPStan, car il y ajoute par défaut le répertoire `tests/` à analyser, qui n'existe pas dans encore dans notre projet.
