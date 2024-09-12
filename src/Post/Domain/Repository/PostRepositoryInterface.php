@@ -46,12 +46,12 @@ interface PostRepositoryInterface
 
     /**
      * Récupère tous les posts
-     * @return array
+     * @return Post[]
      */
     public function all(): array;
 
     /**
-     * Génère un identifiant de post (en général, un UUID ou un entier auto-incrémenté)
+     * Génère un identifiant de post (en général, un UUID, un Ulid ou un entier auto-incrémenté)
      * @return PostId
      */
     public function generateId(): PostId;
