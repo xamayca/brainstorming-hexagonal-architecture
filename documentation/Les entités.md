@@ -6,7 +6,7 @@
 > - Chaque entité est un `objet PHP` qui contient des propriétés qui correspondent aux colonnes de la table.
 > - Les entités sont utilisées pour interagir avec la base de données.
 
-## 1.2 Création de l'entité Post
+## 1.2 Création de l'entité Post (ValueObject ID)
 > - Les paramètres de la classe correspondent aux `colonnes` de la table, par exemple, si vous avez une table `posts` avec les colonnes `id`, `title`, `content`, `created_at`, `updated_at`, vous pouvez créer une entité `Post` avec les propriétés correspondantes.
 > - Des `Getters` et `Setters` sont définis pour permettre l'accès et la modification des données (Getters pour obtenir les données et Setters pour les modifier).
 > - Si un paramètre de cette dernière doit être immutable, nous en ferons un value object.
@@ -41,6 +41,8 @@ readonly class PostId
 > - Elle est immuable et ne peut être modifiée une fois instanciée (readonly) et contient une propriété `$value` qui contient la valeur de l'identifiant du post.
 > - Le type `string` est utilisé pour `l'identifiant` afin de permettre une `flexibilité maximale` (int, string, uuid, etc.) dans le cas où nous voudrions changer le type de l'identifiant à l'avenir.
 > - De plus, nous avons défini un `constructeur` qui prend la valeur de l'identifiant en paramètre et l'assigne à la propriété `$value`.
+
+## 1.3 Création de l'entité Post (Entity)
 ```php
 <?php
 
@@ -136,12 +138,12 @@ class Post
 > - Nous ne les avons pas définis pour les propriétés `id`, `createdAt` et `updatedAt` car elles sont immuables et ne peuvent pas être modifiées une fois qu'elles ont été créées.
 > - Nous avons également défini une méthode `update` qui met à jour la propriété `updatedAt` à chaque fois qu'une propriété de la classe, donc d'un post, est modifiée.
 > - Par exemple, si le titre d'un post est modifié, la date de mise à jour du post sera également mise à jour.
-
 > - La suite va consister à créer un `Repository` pour notre entité `Post` afin de pouvoir interagir avec la base de données.
 > - Un `Repository` est une classe qui permet de récupérer, stocker et supprimer des entités dans la base de données.
 > - Il contient des méthodes pour effectuer des opérations de base sur les entités, telles que la recherche par identifiant, la sauvegarde et la suppression.
 > - Nous allons créer un `Repository` pour notre entité `Post` qui nous permettra d'interagir avec la base de données et de manipuler les posts.
 
+## 1.4 Création de l'interface PostRepositoryInterface (Repository)
 ```php
 <?php
 
@@ -165,6 +167,7 @@ interface PostRepositoryInterface
 > - Ces méthodes seront implémentées dans le `Repository` de l'entité `Post` pour effectuer les opérations correspondantes sur la base de données.
 > - Nous allons maintenant créer une classe `PostRepository` qui implémentera cette interface et nous permettra d'interagir avec la base de données.
 
+## 1.5 Création du Repository Post (PostRepository implements PostRepositoryInterface)
 ```php
 <?php
 
