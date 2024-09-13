@@ -108,3 +108,48 @@ composer require --dev phpstan/phpstan-doctrine
 > - Cette extension permet d'ajouter des règles de validation pour Doctrine dans PHPStan et d'améliorer la qualité de votre code PHP.
 > - Elle ajoute des règles de validation DQL pour les erreurs d'analyse, les classes d'entités inconnues et les champs persistants inconnus.
 > - Elle permet aussi de reconnaître la magie des méthodes de Doctrine, les annotations Doctrine et les types de retour des méthodes de Doctrine.
+
+## Configuration de PHPStan avec l'extension Doctrine
+> - Pour configurer PHPStan avec l'extension Doctrine, vous pouvez ajouter l'extension Doctrine à votre fichier de configuration PHPStan `phpstan.neon` :
+```neon
+# phpstan.neon
+
+includes:
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-doctrine/rules.neon
+
+parameters:
+    level: 8
+    paths:
+        - bin
+        - config
+        - public
+        - src
+        - tests
+
+    doctrine:
+    	objectManagerLoader: tests/PHPStan/object-manager.php
+```
+> - Dans ce fichier de configuration, nous avons inclus les fichiers `extension.neon` et `rules.neon` de l'extension Doctrine pour PHPStan.
+> - Le fichier `extension.neon` ajoute des règles de `validation pour Doctrine` dans PHPStan et améliore la qualité de votre code PHP.
+> - Le fichier `rules.neon` ajoute des règles de `validation DQL` pour les erreurs d'analyse, les classes d'entités inconnues et les champs persistants inconnus.
+> - Nous avons aussi ajouté un paramètre `doctrine` pour spécifier le fichier `doctrine-object-manager.php` qui charge l'EntityManager de Doctrine.
+> - Maintenant, nous allons avoir besoin de créer le fichier `doctrine-object-manager.php` dans le répertoire `tests/PHPStan/` pour charger l'EntityManager de Doctrine.
+> - Voici un exemple de fichier `doctrine-object-manager.php` pour charger l'EntityManager de Doctrine :
+```php
+<?php
+
+use App\Kernel;
+use Symfony\Component\Dotenv\Dotenv;
+
+require __DIR__ . '/../../vendor/autoload.php';
+
+(new Dotenv())->bootEnv(__DIR__ . '/../../.env');
+
+$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
+$kernel->boot();
+return $kernel->getContainer()->get('doctrine.orm.entity_manager');
+```
+> - De cette façon, PHPStan auras accès à `l'EntityManager de Doctrine` et seras en mesure de `comprendre` les `annotations` Doctrine et les `types de retour` des `méthodes` de Doctrine.
+> - Mais aussi de reconnaître la magie des méthodes de Doctrine et de valider les `erreurs d'analyse`, les `classes d'entités inconnues` et les `champs persistants inconnus`.
+> - Maintenant, nous sommes en mesure d'obtenir des erreurs fiables, car PHPStan connait l'EntityManager de Doctrine et ne nous affichera pas d'erreurs d'incompréhension.
