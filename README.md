@@ -1,4 +1,4 @@
-# PROJET API RESTFULL - API Platform & Symfony 7
+# PROJET API RESTFULL - Symfony 7
 
 ### Documentations
 > - Architecture (Hexagonal) :
