@@ -1,6 +1,4 @@
-https://makina-corpus.com/symfony/iterations-vers-ddd-et-clean-architecture-symfony-article-2
-
-# 4 - PHPStan Installation & Utilisation (PHP Static Analysis Tool)
+# PHPStan Installation & Utilisation (PHP Static Analysis Tool)
 
 ## Introduction
 > - PHPStan est un outil d'analyse statique pour PHP qui découvre les erreurs dans votre code sans l'exécuter. Il permet de vérifier la qualité de votre code PHP en détectant les erreurs potentielles.
