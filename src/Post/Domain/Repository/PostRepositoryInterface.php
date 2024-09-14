@@ -46,7 +46,7 @@ interface PostRepositoryInterface
 
     /**
      * Récupère tous les posts
-     * @return Post[]
+     * @return Post[] Un tableau d'objets Post
      */
     public function all(): array;
 
