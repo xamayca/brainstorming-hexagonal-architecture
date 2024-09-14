@@ -153,3 +153,9 @@ return $kernel->getContainer()->get('doctrine.orm.entity_manager');
 > - De cette façon, PHPStan auras accès à `l'EntityManager de Doctrine` et seras en mesure de `comprendre` les `annotations` Doctrine et les `types de retour` des `méthodes` de Doctrine.
 > - Mais aussi de reconnaître la magie des méthodes de Doctrine et de valider les `erreurs d'analyse`, les `classes d'entités inconnues` et les `champs persistants inconnus`.
 > - Maintenant, nous sommes en mesure d'obtenir des erreurs fiables, car PHPStan connait l'EntityManager de Doctrine et ne nous affichera pas d'erreurs d'incompréhension.
+
+## Utilisation de PHPStan avec l'extension Symfony
+> - Pour utiliser PHPStan avec l'extension Symfony, vous pouvez installer l'extension PHPStan pour Symfony via Composer :
+```bash
+composer require --dev phpstan/phpstan-symfony
+```
