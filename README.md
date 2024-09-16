@@ -1,7 +1,7 @@
 # BRAINSTORMING SUR L'ARCHITECTURE HEXAGONALE
 
 ### Documentations
-> - Principe de subsittution de Liskov (SOILD) :
+> - Principe de subsittution de Liskov (SOLID) :
 > - https://www.youtube.com/watch?v=HWmn_UWcbgg
 > - Architecture (Hexagonal) :
 > - https://medium.com/@albert.llousas/hexagonal-architecture-common-pitfalls-f155e12388a3
