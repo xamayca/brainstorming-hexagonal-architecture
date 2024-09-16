@@ -1,6 +1,8 @@
 # Liens utiles
 
 ### Documentations
+> - Principes SOLID (Conférence PHP Symfony) :
+> - https://www.youtube.com/watch?v=1a50ZzQUUps
 > - Principe de substitution de Liskov (SOLID) :
 > - https://www.youtube.com/watch?v=HWmn_UWcbgg
 > - Architecture (Hexagonal) :
