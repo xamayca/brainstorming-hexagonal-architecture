@@ -56,9 +56,10 @@ class Email
 }
 ```
 > - Dans cet exemple, nous avons séparé les responsabilités de création d'utilisateur et d'envoi d'email en deux classes distinctes (`User` et `Email`).
-> - Cela permet de respecter le principe SRP et de créer des classes plus cohérentes et plus faciles à maintenir.
+> - Cela permet de respecter le `principe SRP` et de créer des classes plus cohérentes et plus faciles à maintenir.
 > - En respectant le principe SRP, nous créons des classes plus `modulaires`, plus `réutilisables` et plus `faciles à tester`.
 
 ## 4. Interface Segregation Principle (ISP)
 > - Le principe de `ségrégation des interfaces (Interface Segregation Principle)` est le quatrième principe SOLID.
 > - Ce principe stipule qu'une `interface` ne doit `pas forcer` les `classes` qui l'implémentent à `mettre en œuvre des méthodes` qu'elles n'utilisent pas.
+> - 
