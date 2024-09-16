@@ -1,6 +1,8 @@
-# PROJET API RESTFULL - Symfony 7
+# BRAINSTORMING SUR L'ARCHITECTURE HEXAGONALE
 
 ### Documentations
+> - Principe de subsittution de Liskov (SOILD) :
+> - https://www.youtube.com/watch?v=HWmn_UWcbgg
 > - Architecture (Hexagonal) :
 > - https://medium.com/@albert.llousas/hexagonal-architecture-common-pitfalls-f155e12388a3
 > - Architecture (Hexagonal Alistair Cockburn) :
@@ -35,7 +37,4 @@
 > - https://github.com/lexik/LexikJWTAuthenticationBundle/blob/3.x/Resources/doc/index.rst#installation
 > - LexikJWTAuthenticationBundle (Docs):
 > - https://github.com/lexik/LexikJWTAuthenticationBundle/tree/3.x/Resources/doc
-
-## Sommaire
-> - ### [0-Architecture.md](https://github.com/xamayca/api-hexagonal/blob/master/Documentation/Architecture.md)
 
