@@ -62,7 +62,122 @@ class Email
 ## 2. Open/Closed Principle (OCP)
 > - Le principe `ouvert/fermé (Open/Closed Principle)` est le deuxième principe SOLID.
 > - Ce principe stipule qu'une classe doit être `ouverte à l'extension` mais `fermée à la modification`.
+> 
 
+
+
+## 3. Liskov Substitution Principle (LSP)
+> - Le principe de `substitution de Liskov (Liskov Substitution Principle)` est le troisième principe SOLID.
+> - Ce principe stipule que si une classe `B` est une sous-classe d'une classe `A`, alors les objets de la classe `A` peuvent être remplacés par des objets de la classe `B` sans affecter le comportement du programme.
+> - En d'autres termes, une classe dérivée doit pouvoir être substituée à sa classe de base sans que cela modifie le comportement du programme.
+> - Ce principe permet de créer des classes plus `flexibles` et plus `extensibles` et de garantir que les classes dérivées respectent le contrat de la classe de base.
+> - Exemple de classe qui viole le principe LSP :
+```php
+<?php
+
+class Bird
+{
+    public function fly()
+    {
+        // Voler
+        echo 'Je vole';
+    }
+}
+
+class Duck extends Bird
+{
+    public function quack()
+    {
+        // Cancaner
+        echo 'Coin coin';
+    }
+}
+
+class Penguin extends Bird
+{
+    public function fly()
+    {
+        throw new Exception('Les pingouins ne peuvent pas voler');
+    }
+    
+    public function swim()
+    {
+        // Nager
+        echo 'Je nage';
+    }
+}
+
+// Fonction qui prend un oiseau en paramètre et le fait voler
+function makeBirdFly(Bird $bird)
+{
+    $bird->fly();
+}
+
+$duck = new Duck(); // Instanciation d'un canard
+$penguin = new Penguin(); // Instanciation d'un pingouin
+
+makeBirdFly($duck); // OK
+makeBirdFly($penguin); // Exception
+```
+> - Dans cet exemple, la classe `Penguin` viole le principe LSP car elle redéfinit la méthode `fly` pour lancer une exception.
+> - Cela signifie que les objets de la classe `Penguin` ne peuvent pas être substitués aux objets de la classe `Bird` sans affecter le comportement du programme.
+> - En revanche, la classe `Duck` respecte le principe LSP car elle ne modifie pas le comportement de la méthode `fly` de la classe `Bird` et le canard peut voler.
+> - Pour respecter le principe LSP, voici comment nous pourrions réorganiser le code :
+```php
+<?php
+
+class FlyingBird
+{
+    public function fly()
+    {
+        // Voler
+        echo 'Je vole';
+    }
+}
+
+class SwimmingBird
+{
+    public function swim()
+    {
+        // Nager
+        echo 'Je nage';
+    }
+}
+
+class Duck extends FlyingBird
+{
+    public function quack()
+    {
+        // Cancaner
+        echo 'Coin coin';
+    }
+}
+
+class Penguin extends SwimmingBird
+{
+}
+
+function makeBirdFly(FlyingBird $bird)
+{
+    $bird->fly();
+}
+
+function makeBirdSwim(SwimmingBird $bird)
+{
+    $bird->swim();
+}
+
+$duck = new Duck(); // Instanciation d'un canard
+$penguin = new Penguin(); // Instanciation d'un pingouin
+
+makeBirdFly($duck); // OK
+makeBirdSwim($penguin); // OK
+```
+> - Dans cet exemple, nous avons créé deux classes de base `FlyingBird` et `SwimmingBird` qui définissent les comportements de vol et de nage respectivement.
+> - Les classes `Duck` et `Penguin` héritent de ces classes de base et implémentent les comportements spécifiques des canards et des pingouins.
+> - Cela permet de respecter le principe LSP en garantissant que les objets de la classe `Penguin` peuvent être substitués aux objets de la classe `SwimmingBird` sans affecter le comportement du programme.
+> - Ont peu imaginé ensuite que les classes `FlyingBird` et `SwimmingBird` elles-mêmes héritent d'une classe `Bird`, qui sera donc le parent de toutes les classes d'oiseaux volants et nageants.
+> - Par exemple, la classe `Bird` pourrait contenir des propriétés telles que `name`, `color`, `size`, etc., et des méthodes telles que `eat`, `sleep`, `reproduce`, etc qui sont communes à tous les oiseaux.
 
 
 
