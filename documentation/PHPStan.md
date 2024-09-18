@@ -151,6 +151,14 @@ return $kernel->getContainer()->get('doctrine.orm.entity_manager');
 > - De cette façon, PHPStan auras accès à `l'EntityManager de Doctrine` et seras en mesure de `comprendre` les `annotations` Doctrine et les `types de retour` des `méthodes` de Doctrine.
 > - Mais aussi de reconnaître la magie des méthodes de Doctrine et de valider les `erreurs d'analyse`, les `classes d'entités inconnues` et les `champs persistants inconnus`.
 > - Maintenant, nous sommes en mesure d'obtenir des erreurs fiables, car PHPStan connait l'EntityManager de Doctrine et ne nous affichera pas d'erreurs d'incompréhension.
+> - Pour lancer PHPStan avec notre configuration Doctrine, vous pouvez utiliser la commande suivante :
+```bash
+vendor/bin/phpstan analyse --configuration phpstan.neon
+```
+> - PHPStan va utiliser le fichier de configuration `phpstan.neon` à la racine de votre projet pour analyser le code de votre projet avec l'extension Doctrine.
+> - Vous pouvez voir ici que nous ne précisons pas le répertoire à analyser, car il est déjà défini dans le fichier de configuration `phpstan.neon`.
+> - Si vous avez des erreurs dans votre code, PHPStan va les afficher et vous pourrez les corriger pour améliorer la qualité de votre code PHP.
+
 
 ## Utilisation de PHPStan avec l'extension Symfony
 > - Pour utiliser PHPStan avec l'extension Symfony, vous pouvez installer l'extension PHPStan pour Symfony via Composer :
