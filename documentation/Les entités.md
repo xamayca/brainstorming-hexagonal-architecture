@@ -4,7 +4,7 @@
 > - Une entité est un objet PHP qui représente une table dans une base de données.
 > - Par exemple, si vous avez une table `users` dans votre base de données, vous pouvez créer une entité `User` qui correspond à cette table.
 > - Chaque entité est un `objet PHP` qui contient des propriétés qui correspondent aux colonnes de la table.
-> - Les entités sont utilisées pour interagir avec la base de données.
+> - Les entités sont utilisées pour interagir avec la base de données.**
 
 ## 1.2 Création de l'entité Post (ValueObject ID)
 > - Les paramètres de la classe correspondent aux `colonnes` de la table, par exemple, si vous avez une table `posts` avec les colonnes `id`, `title`, `content`, `created_at`, `updated_at`, vous pouvez créer une entité `Post` avec les propriétés correspondantes.

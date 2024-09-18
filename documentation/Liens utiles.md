@@ -3,7 +3,11 @@
 ### Documentations
 > - Principes SOLID (Conférence PHP Symfony) :
 > - https://www.youtube.com/watch?v=1a50ZzQUUps
-> - Principe de substitution de Liskov (SOLID) :
+> - Principe de responsabilité unique - S - (SOLID) :
+> - https://www.youtube.com/watch?v=XRdmfIpeqSk&list=PLeeuvNW2FHVjp0PtY8PF5S6okZcDIA4UJ
+> - Principe Open/Closed - O - (SOLID) :
+> - https://www.youtube.com/watch?v=zMdwBk-kQGw
+> - Principe de substitution de Liskov - L - (SOLID) :
 > - https://www.youtube.com/watch?v=HWmn_UWcbgg
 > - Architecture (Hexagonal) :
 > - https://medium.com/@albert.llousas/hexagonal-architecture-common-pitfalls-f155e12388a3
